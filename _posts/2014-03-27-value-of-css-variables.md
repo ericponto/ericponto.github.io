@@ -12,7 +12,7 @@ But, with the kind of recent addition of CSS variables in Firefox, I've given th
 ## The basics
 If you haven't seen the syntax of CSS variables, here are the basics. A CSS variables is much the same as a variable in any other programming language. You declare them with a name and a value, then can use them throughout your CSS.
 
-The syntax to declare a new CSS variable is simalar to anything in CSS. It is a `name: value` pair. And it must be declared inside a ruleset for a selector. To globally declare the variable, it can just be done on the `:root`. The specific syntax is:
+The syntax to declare a new CSS variable is similar to anything in CSS. It is a `name: value` pair. And it must be declared inside a ruleset for a selector. To globally declare the variable, it can just be done on the `:root`. The specific syntax is:
 
 {% highlight css %}
 :root {
@@ -61,7 +61,7 @@ a {
 
 The real value, I think, is in the `.sidebar` case. Traditionally, we would have either had to create a new class for the link to have a green color (like we did with `.link-alt`) or we would have had to make use of a longer selector (`.sidebar a`). For a simple link, there's not any huge efficiency gain here, but let's look at a bigger example.
 
-## A reusuable component
+## A reusable component
 For this example, let's just say we have a panel component that we might want to drop in different places on our website. Some simple markup:
 
 {% highlight html %}
@@ -133,7 +133,7 @@ So our CSS has almost doubled in size and we now need to modify our HTML with th
 }
 {% endhighlight %}
 
-Again the CSS has dramatically grown, but at least we don't have to change our HTML. The specificity of all of our selectors has grown too. That's not neccessarily a problem, but I like to keep everything at the class/attribute specificty level for simplicity and to let the cascade do its thing.
+Again the CSS has dramatically grown, but at least we don't have to change our HTML...it's just a copy and paste. But the specificity of all of our selectors has grown too. That's not necessarily a big problem, but I like to keep everything at the class/attribute specificity level for simplicity and to let the cascade do its thing.
 
 So here is where variables can really help us out. First let's make some of those properties configurable with variables.
 
@@ -142,7 +142,7 @@ So here is where variables can really help us out. First let's make some of thos
 	var-panel-color: #222;
 	var-panel-header-bg-color: #ddd;
 	var-panel-body-bg-color: #fff;
-	var-panel-border-color: #fff;
+	var-panel-border-color: #ccc;
 	var-panel-padding: 1em;
 }
 
@@ -179,7 +179,7 @@ And that's it. That's all the extra CSS needed and no changes are needed to the 
 
 ## The future
 
-The spec for [CSS Variables](http://dev.w3.org/csswg/css-variables/) has some features that have not been implemented in any of the browser (as far as I can tell at least). The one that I think is most exciting is a second argument that can be passed into `var` that defines a fallback value if the variable has not been set.
+The spec for [CSS Variables](http://dev.w3.org/csswg/css-variables/) has some features that have not been implemented in any of the browser (as far as I can tell at least). The one that I think is most exciting is a second argument that can be passed into `var` that defines a fallback value if the variable has not been set. (If you're familar with Sass, this is very similar to defining a variable with `!default`.)
 
 {% highlight css %}
 h1 {
@@ -189,5 +189,4 @@ h1 {
 
 In this case, if `var-my-color` hasn't been defined anywhere in scope, then the color of the `h1` will fallback to a nice bright red, `#f00`. The fallback argument makes defining default values much simpler. You will no longer have to load up the `:root` with all of the defaults...they can be defined in place.
 
-Now what we need is for much better browser support. Chrome has had CSS Variables behind the "Experimental Web Platform features" flag for a while and Firefox now has them behind the `layout.css.variables.enabled` pref. Hopefully soon they'll both be available by default and more browser will add support.
-
+Now what we need is for much better browser support. Chrome has had CSS Variables behind the "Experimental Web Platform features" flag for a while and Firefox now has them behind the `layout.css.variables.enabled` preference. Hopefully soon they'll both be available by default and more browser will add support too.
