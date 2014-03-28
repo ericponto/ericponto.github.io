@@ -1,0 +1,29 @@
+.excerpt {
+	margin: 1em 0;
+}
+
+.excerpt-title {
+	font-size: 2em;
+	margin: 0;
+	position: relative;
+
+	@media @desktop {
+		&:before {
+			content: "\00BB";
+			position: absolute;
+			left: -1em;
+		}
+	}
+	
+
+	a {
+		.link(#000);
+	}
+
+}
+
+.excerpt-info {
+	padding: 0.5em 0;
+	font-style: italic;
+	font-size: 0.9em;
+}

@@ -1,0 +1,32 @@
+.btn-mixin(@btnColor, @textColor) {
+	background-color: @btnColor;
+	border-color: darken(@btnColor, 10%);
+	color: @textColor;
+
+	&:hover, &:focus {
+		background-color: lighten(@btnColor, 5%);
+		border-color: darken(@btnColor, 5%);
+	}
+
+	&:active {
+		background-color: darken(@btnColor, 5%);
+		border-color: darken(@btnColor, 15%);
+	}
+}
+
+.btn {
+	padding: 0.5em 1em;
+	border-radius: .25em;
+	border: 1px solid;
+
+	.btn-mixin(#eee, #222);
+}
+
+.btn-comments {
+	.btn-mixin(#099, #fff);
+	display: block;
+
+	@media @tablet {
+		display: none;
+	}
+}

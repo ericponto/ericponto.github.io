@@ -1,56 +1,34 @@
-<!doctype HTML>
-<html>
-	<head>
-		<meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>Eric Ponto</title>
-		<meta name="viewport" content="width=device-width">
+---
+  title: Home
+  layout: default
+  description: The website of Eric Ponto
+---
 
-		<script>
-	/* grunticon Stylesheet Loader | https://github.com/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */
-window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!!t.document.createElementNS&&!!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect&&!!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1"),A=function(A){var o=t.document.createElement("link"),r=t.document.getElementsByTagName("script")[0];o.rel="stylesheet",o.href=e[A&&n?0:A?1:2],r.parentNode.insertBefore(o,r)},o=new t.Image;o.onerror=function(){A(!1)},o.onload=function(){A(1===o.width&&1===o.height)},o.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};
-grunticon( [ "icons.data.svg.css", "icons.data.png.css", "icons.fallback.css" ] );
-		</script>
-	<noscript><link href="icons.fallback.css" rel="stylesheet"></noscript>
-		<link rel="stylesheet" href="main.css">
-	</head>
-	<body>
-		<h1>Eric Ponto</h1>
+<header>
+	<h1 class="title-home">eric ponto</h1>
+</header>
 
-		<div>
-			<a class="profile twitter" href="https://twitter.com/ericponto">
-				<i class="icon-twitter"></i>
-				Twitter<br />
-				<span class="name">@EricPonto</span>
-			</a>
-			<a class="profile github" href="https://github.com/ericponto">
-				<i class="icon-github"></i>
-				GitHub<br />
-				<span class="name">ericponto</span>
-			</a>
-			<a class="profile bhgp" href="http://www.blackheartgoldpants.com">
-				<i class="icon-bhgp"></i>
-				BHGP<br />
-				<span class="name">fightforiowa</span>
-			</a>
-			<div style="clear:both"></div>
+<main>
+	<ul class="link-list">
+		<li><a href="https://twitter.com/ericponto" class="link-twitter">twitter.com/ericponto</a></li>
+		<li><a href="https://github.com/ericponto" class="link-github">github.com/ericponto</a></li>
+		<li><a href="http://www.linkedin.com/in/ericponto" class="link-linkedin">linkedin.com/in/ericponto</a></li>
+		<li><a href="http://www.blackheartgoldpants.com" class="link-bhgp">blackheartgoldpants.com</a></li>
+	</ul>
+
+
+	{% for post in site.posts limit:3%}
+		<div class="excerpt">
+			<h4 class="excerpt-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+			<div class="excerpt-info">
+				<time>{{ post.date | date_to_string }}</time> |  {{ post.tags | array_to_sentence_string }}
+			</div>
+			<div class="excerpt-content">
+				{{ post.excerpt | markdownify }}
+			</div>
+			<div class="excerpt-more">
+				<a href="{{ post.url }}">Read more</a>
+			</div>
 		</div>
-		<div class="other">
-			Eric elsewhere: 
-			<a href="http://www.linkedin.com/profile/view?id=27249121">LinkedIn</a> | 
-			<a href="https://plus.google.com/107139236180529856713/posts">Google+</a> | 
-			<a href="http://stackoverflow.com/users/1954076/ericponto">Stack Overflow</a> |
-			<a href="http://codepen.io/ericponto">CodePen</a>
-		</div>
-
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		  ga('create', 'UA-41847318-1', 'ericponto.com');
-		  ga('send', 'pageview');
-		</script>
-	</body>
-</html>
-					
+	{% endfor %}
+</main>
