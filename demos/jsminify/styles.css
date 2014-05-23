@@ -1,0 +1,14 @@
+.dropzone {
+	border: 0.5em dashed #09c;
+	padding: 2.5em;
+}
+
+.over {
+	border-color: #08b;
+	background: #cdf;
+}
+
+.results {
+	padding: 1em;
+	background: #eee;
+}

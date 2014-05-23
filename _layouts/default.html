@@ -15,6 +15,9 @@
 
 			<link rel="stylesheet" href="/css/styles.css">
 
+			{% if page.css %}
+			<link rel="stylesheet" href="{{page.css}}">
+			{% endif %}
 	</head>
 	<body>
 		{{ content }}

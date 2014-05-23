@@ -1,0 +1,59 @@
+---
+  layout: demos
+  title: Drag and Drop JavaScript Minifier
+  css: styles.css
+---
+
+<main>
+	<div class="dropzone">
+		Drop JavaScript File here
+	</div>
+
+	<h3>Results:</h3>
+	<pre class="results"></pre>
+</main>
+
+<script src="uglifyweb.js"></script>
+<script>
+var dropzone = document.querySelector(".dropzone");
+var results = document.querySelector(".results");
+
+dropzone.addEventListener("dragover", function(e) {
+	e.preventDefault();
+	e.stopPropagation();
+	
+	e.dataTransfer.dropEffect = "copy";
+	dropzone.classList.add("over");
+}, false);
+
+dropzone.addEventListener("drop", function(e) {
+	e.preventDefault();
+	e.stopPropagation();
+	
+	// let's just work with one file
+	var file = e.dataTransfer.files[0];
+	var reader = new FileReader();
+
+	reader.onload = function(e) {
+		var text = e.target.result;
+
+		// use uglifyweb to minify the file
+		var output = uglify(text);
+
+		// put the minified code in the results element
+		results.innerHTML = output;
+	}
+
+	reader.readAsText(file);
+
+	dropzone.classList.remove("over");
+
+}, false);
+
+dropzone.addEventListener("dragleave", function(e) {
+	e.preventDefault();
+	e.stopPropagation();
+
+	dropzone.classList.remove("over");
+})
+</script>
