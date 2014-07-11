@@ -1,6 +1,6 @@
 name: Eric Ponto
 markdown: redcarpet
-pygments: true
+highlighter: 'pygments'
 safe: false
 relative_permalinks: false
 exclude: ['README.md', 's3_website.yml', 'node_modules', 'bower.json', '.bowerrc', 'package.json', 'Gruntfile.js']
