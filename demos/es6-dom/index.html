@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>es6 Dom Lib Test</title>
+	<style>
+		.passed {
+			color: #093;
+		}
+		.failed {
+			color: #c03;
+		}
+	</style>
+</head>
+<body>
+	<div class="addClass">Add Class Test</div>
+	<div class="removeClass passed failed">Remove Class Test</div>
+	<div class="hasClass">Has Class Test</div>
+	<a href="#">On Test (Click me)</a>
+
+	<script src="traceur.min.js"></script>
+	<script src="es6-module-loader.min.js"></script>
+	<script>System.import("test-app");</script>
+</body>
+</html>

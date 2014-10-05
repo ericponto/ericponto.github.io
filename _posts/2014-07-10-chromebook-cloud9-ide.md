@@ -11,7 +11,7 @@ So we've always had another laptop that I used along side the Chromebook for dev
 
 I was a little worried that it again would not be suitable as a dev machine. I had heard of [Cloud9](https://c9.io/) and decided tonight to give it a try, but I was not expecting much from a cloud-based solution. I was totally wrong. I am using it right now and it is awesome.
 
-I quickly connected it to my github account and clone in the repo for this site. From the provided terminal, I found node and ruby already installed. So I was able to `npm install` and `gem install jekyll` to get the whole site up and running "locally." After installing the grunt-cli globally, I made changes in a Less file and ran `grunt` just as I would normally and built the CSS. So cool.
+I quickly connected it to my github account and cloned in the repo for this site. From the provided terminal, I found node and ruby already installed. So I was able to `npm install` and `gem install jekyll` to get the whole site up and running "locally." After installing the grunt-cli globally, I made changes in a Less file and ran `grunt` just as I would normally and built the CSS. So cool.
 
 The only tricky part of whole process was getting the Jekyll server running where I could actually see my changes. But Cloud9 has variables you can use to correctly set the port and host for the server.
 

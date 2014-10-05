@@ -17,7 +17,7 @@ The syntax to declare a new CSS variable is similar to anything in CSS. It is a 
 {% highlight css %}
 :root {
 	/* set a variable named "my-color" to "#c0ffee"
-	var-my-color: #c0ffee;
+	--my-color: #c0ffee;
 }
 {% endhighlight %}
 
@@ -26,7 +26,7 @@ To reference a variable, you use the `var()` notation passing in the name of the
 {% highlight css %}
 /* use the my-color variable */
 h1 {
-	color: var(my-color);
+	color: var(--my-color);
 }
 {% endhighlight %}
 
@@ -37,25 +37,25 @@ So, a simple example...we want the link color as a default to be blue, but if it
 
 {% highlight css %}
 :root {
-	var-link-color: blue;
+	--link-color: blue;
 }
 
 .link-alt {
-	var-link-color: red;
+	--link-color: red;
 }
 
 .sidebar {
-	var-link-color: green;
+	--link-color: green;
 }
 
 @media all and (min-width: 1500px) {
 	:root {
-		var-link-color: yellow;
+		--link-color: yellow;
 	}
 }
 
 a {
-	color: var(link-color);
+	color: var(--link-color);
 }
 {% endhighlight %}
 
@@ -139,27 +139,27 @@ So here is where variables can really help us out. First let's make some of thos
 
 {% highlight css %}
 :root {
-	var-panel-color: #222;
-	var-panel-header-bg-color: #ddd;
-	var-panel-body-bg-color: #fff;
-	var-panel-border-color: #ccc;
-	var-panel-padding: 1em;
+	--panel-color: #222;
+	--panel-header-bg-color: #ddd;
+	--panel-body-bg-color: #fff;
+	--panel-border-color: #ccc;
+	--panel-padding: 1em;
 }
 
 .panel {
-	border: 1px solid var(panel-border-color);
+	border: 1px solid var(--panel-border-color);
 	border-radius: 2px;
-	color: var(panel-color);
+	color: var(--panel-color);
 }
 
 .panel-header {
-	background-color: var(panel-header-bg-color);
-	padding: var(panel-padding);
+	background-color: var(--panel-header-bg-color);
+	padding: var(--panel-padding);
 }
 
 .panel-body {
-	background-color: var(panel-body-bg-color)
-	padding: var(panel-padding);
+	background-color: var(--panel-body-bg-color)
+	padding: var(--panel-padding);
 }
 {% endhighlight %}
 
@@ -167,11 +167,11 @@ Now we can just update those variables for the footer.
 
 {% highlight css %}
 .footer {
-	var-panel-color: #fff;
-	var-panel-header-bg-color: #069;
-	var-panel-body-bg-color: #39c;
-	var-panel-border-color: #036;
-	var-panel-padding: .5em;
+	--panel-color: #fff;
+	--panel-header-bg-color: #069;
+	--panel-body-bg-color: #39c;
+	--panel-border-color: #036;
+	--panel-padding: .5em;
 }
 {% endhighlight %}
 
@@ -183,7 +183,7 @@ The spec for [CSS Variables](http://dev.w3.org/csswg/css-variables/) has some fe
 
 {% highlight css %}
 h1 {
-	color: var(my-color, #f00);
+	color: var(--my-color, #f00);
 }
 {% endhighlight %}
 
@@ -192,5 +192,5 @@ In this case, if `var-my-color` hasn't been defined anywhere in scope, then the 
 Now what we need is for much better browser support. Chrome has had CSS Variables behind the "Experimental Web Platform features" flag for a while and Firefox now has them behind the `layout.css.variables.enabled` preference. Hopefully soon they'll both be available by default and more browser will add support too.
 
 <p class="note">
-<b>Updated [5/20/2014]</b> - The spec has changed! Instead of the <code>var-*</code> syntax, it is now <code>--*</code> for custom properties. You still use them using the <code>var()</code> syntax however.
+<b>Updated [5/20/2014]</b> - The spec has changed! Instead of the <code>var-*</code> syntax, it is now <code>--*</code> for custom properties. You still use them using the <code>var()</code> syntax however. I've u
 </p>
