@@ -5,7 +5,7 @@
   excerpt: ES6 and ES7 are making JavaScript even better. To expirement with some of the new features, let's look at how to write a jQuery-like DOM library.
 ---
 
-I've been exploring what the new specifications of JavaScript have in store, and I have to say I'm pretty excited with the direction it is going. A lot of the common problems that require a lot of boilerplate to solve (or a util library), now have simple methods (for example, creating an array out of an array-like object, like `arguements`). So just to expirement with ES6 (and maybe a little bit of ES7), I wanted to try to make a jQuery-like DOM library. 
+I've been exploring what the new specifications of JavaScript have in store, and I have to say I'm pretty excited with the direction it is going. A lot of the common problems that require a lot of boilerplate to solve (or a util library), now have simple methods (for example, creating an array out of an array-like object, like `arguments`). So just to expirement with ES6 (and maybe a little bit of ES7), I wanted to try to make a jQuery-like DOM library. 
 
 ##Getting Classy
 jQuery sometime feels like it has a lot of magic going on, but the whole DOM library part of it is just some syntax sugar around the usual constructor function/prototype pattern. When you call the `$` with a selector, it creates a `new` jQuery object. Then, all those methods and plugins that get added to `$.fn` are really just getting added to `$.prototype`. (This line is right in the jQuery source: `jQuery.fn = jQuery.prototype ...`
