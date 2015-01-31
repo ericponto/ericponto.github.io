@@ -88,7 +88,7 @@ Which spits out:
 }
 {% endhighlight %}
 
-Here is a simple [demo of these mixins in action on CodePen](http://codepen.io/ericponto/pen/dPzaMd). And if LESS is more your thing, then here's a LESS version of the code (and a [demo](http://codepen.io/ericponto/pen/EawxjR).
+Here is a simple [demo of these mixins in action on CodePen](http://codepen.io/ericponto/pen/dPzaMd). And if LESS is more your thing, then here's a LESS version of the code and a [demo](http://codepen.io/ericponto/pen/EawxjR).
 
 {% highlight css %}
 .block(@name, @content) {
