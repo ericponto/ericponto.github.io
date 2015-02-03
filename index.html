@@ -5,28 +5,28 @@
 ---
 
 <header>
-	<h1 class="title-home">eric ponto</h1>
+	<h1 class="title title%home"><span>eric</span> <span>ponto</span></h1>
 </header>
 
-<main>
-	<ul class="link-list">
+<main class="main">
+	<!--ul class="link-list">
 		<li><a href="https://twitter.com/ericponto" class="link-twitter">twitter.com/ericponto</a></li>
 		<li><a href="https://github.com/ericponto" class="link-github">github.com/ericponto</a></li>
 		<li><a href="http://www.linkedin.com/in/ericponto" class="link-linkedin">linkedin.com/in/ericponto</a></li>
 		<li><a href="http://www.blackheartgoldpants.com" class="link-bhgp">blackheartgoldpants.com</a></li>
-	</ul>
+	</ul-->
 
 
 	{% for post in site.posts %}
 		<div class="excerpt">
-			<h4 class="excerpt-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
-			<div class="excerpt-info">
+			<h4 class="excerpt.title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+			<div class="excerpt.info">
 				<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time> |  {{ post.tags | array_to_sentence_string }}
 			</div>
-			<div class="excerpt-content">
+			<div class="excerpt.content">
 				{{ post.excerpt | markdownify }}
 			</div>
-			<div class="excerpt-more">
+			<div class="excerpt.more">
 				<a href="{{ post.url }}">Read more</a>
 			</div>
 		</div>

@@ -192,5 +192,5 @@ In this case, if `var-my-color` hasn't been defined anywhere in scope, then the 
 Now what we need is for much better browser support. Chrome has had CSS Variables behind the "Experimental Web Platform features" flag for a while and Firefox now has them behind the `layout.css.variables.enabled` preference. Hopefully soon they'll both be available by default and more browser will add support too.
 
 <p class="note">
-<b>Updated [5/20/2014]</b> - The spec has changed! Instead of the <code>var-*</code> syntax, it is now <code>--*</code> for custom properties. You still use them using the <code>var()</code> syntax however. I've u
+<b>Updated [5/20/2014]</b> - The spec has changed! Instead of the <code>var-*</code> syntax, it is now <code>--*</code> for custom properties. You still use them using the <code>var()</code> syntax however.
 </p>

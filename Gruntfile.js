@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask("build",
 		"build the site",
-		["less", "autoprefixer", "csso", "uglify", "copy"]
+		["sass", "autoprefixer", "csso", "uglify", "copy"]
 	);
 
 	grunt.registerTask("default", ["build"]);

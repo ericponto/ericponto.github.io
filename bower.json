@@ -5,7 +5,7 @@
     "Eric Ponto <eric.ponto@gmail.com>"
   ],
   "description": "Eric Ponto's personal site",
-  "dependencies": {
-    "normalize-css": "~3.0.0"
+  "devDependencies": {
+    "cw-normalize": "~1.0.1"
   }
 }

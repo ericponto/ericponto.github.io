@@ -1,0 +1,60 @@
+.post {
+	margin: 0 0 1em 0;
+	
+	@include part(title) {
+		font-size: 2.5em;
+		line-height: 1;
+		margin: 0;
+		color: #699;
+	
+		@media all and (min-width: 600px) {
+			font-size: 3em;
+		}
+	
+		@media all and (min-width: 1000px) {
+			font-size: 3.5em;
+		}
+	}
+	
+	@include part(info) {
+		padding: 0.5em 0;
+		font-style: italic;
+		font-size: 0.9em;
+	}
+
+
+	@include part(body) {
+		margin-bottom: 1em;
+		padding-bottom: 1.5em;
+		position: relative;
+	
+		&:after {
+			content: " ; ";
+			text-align: center;
+			display: block;
+			font-size: 1.5em;
+			color: #899;
+			z-index: 2;
+			position: absolute;
+			bottom: 0px;
+			background: #fff;
+			left: 50%;
+			margin-left: -1em;
+			width: 2em;
+		}
+	
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: .9em;
+			border-top: 1px solid #dee;
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+.note {
+	background: #f2f6f6;
+	padding: 0.5em;
+}

@@ -1,0 +1,40 @@
+.title {
+	margin: 0;
+	text-align: center;
+	color: #899;
+	font-size: 2em;
+		
+	@media all and (min-width: 700px) {
+		font-size: 2.5em;
+	}
+
+	@media all and (min-width: 1000px) {
+		font-size: 3em;
+	}
+	
+	a {
+		color: #899;
+	}
+	
+	span {
+		// inline-block so :first-letter works
+		display: inline-block;
+		
+		&:first-letter {
+			color: #699;
+		}
+	}
+	
+	
+	@include mod(home) {
+		font-size: 3em;
+		
+		@media all and (min-width: 700px) {
+			font-size: 5em;
+		}
+	
+		@media all and (min-width: 1000px) {
+			font-size: 7.5em;
+		}
+	}
+}

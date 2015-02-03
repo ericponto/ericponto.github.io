@@ -1,0 +1,17 @@
+@mixin part($name) {
+	&\.#{$name} {
+		@content;
+	}
+}
+
+@mixin mod($name) {
+	&\%#{$name} {
+		@content;
+	}
+}
+
+@mixin state($name) {
+	&.\=#{$name} {
+		@content;
+	}
+}

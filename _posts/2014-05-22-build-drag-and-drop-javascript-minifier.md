@@ -87,7 +87,7 @@ dropzone.addEventListener("drop", function(e) {
 }, false);
 {% endhighlight %}
 
-Check out a working example: [Drag and Drop JavaScript Minifier Demo](http://ericponto.com/demos/jsminify/index.html).
+Check out a working example: [Drag and Drop JavaScript Minifier Demo](http://www.ericponto.com/demos/jsminify/index.html).
 
 ## Browser Support
 I should probably mention browser support at some point. It is actually pretty good. [Drag and drop has great support](http://caniuse.com/dragndrop) on non-mobile browsers. IE actually implemented a version of it was back in IE5. The [file reader's support](http://caniuse.com/filereader) is more widespread wth the addition of the mobile browsers, but doesn't extend very far back in version of IE.

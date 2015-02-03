@@ -1,0 +1,56 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	font: normal 14px/1.5 Georgia, Cambria, serif;
+	color: #444;
+	background: #dee;
+	margin: 0;
+	border-top: 0.5em solid #399;
+	
+	@media all and (min-width: 480px) {
+		font-size: 16px;
+	}
+	
+	@media all and (min-width: 720px) {
+		font-size: 18px;
+	}
+}
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #399;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+		color: #288;
+	}
+}
+
+.main {
+	padding: 1em;
+	margin: 1em auto 2em auto;
+	width: 100%;
+	max-width: 1000px;
+	background: #fff;
+
+	@media all and (min-width: 600px) {
+		padding: 1.5em;
+		width: 100%;
+	}
+
+	@media all and (min-width: 1000px) {
+		padding: 2em;
+		width: 90%;
+		box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.5);
+	}
+}
+
+code {
+	color: #c30;
+}

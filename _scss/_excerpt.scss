@@ -1,0 +1,25 @@
+.excerpt {
+	margin: 1em 0 3em 0;
+	
+	@include part(title) {
+		font-size: 1.75em;
+		margin: 0;
+		line-height: 1.25;
+		position: relative;
+		
+		a {
+			color: #899;
+			
+			&:hover,
+			&:focus {
+				color: #677;
+			}
+		}
+	}
+	
+	@include part(info) {
+		padding: 0.5em 0;
+		font-style: italic;
+		font-size: 0.9em;
+	}
+}
