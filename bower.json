@@ -6,6 +6,7 @@
   ],
   "description": "Eric Ponto's personal site",
   "devDependencies": {
-    "cw-normalize": "~1.0.1"
+    "cw-normalize": "~1.0.1",
+    "html5shiv": "~3.7.2"
   }
 }

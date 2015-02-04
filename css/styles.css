@@ -365,15 +365,12 @@ th {
   box-sizing: border-box; }
 
 body {
-  font: normal 14px/1.5 Georgia, Cambria, serif;
+  font: normal 16px/1.5 Georgia, Cambria, serif;
   color: #444;
   background: #dee;
   margin: 0;
   border-top: 0.5em solid #399; }
   @media all and (min-width: 480px) {
-    body {
-      font-size: 16px; } }
-  @media all and (min-width: 720px) {
     body {
       font-size: 18px; } }
 
@@ -391,11 +388,10 @@ a {
   width: 100%;
   max-width: 1000px;
   background: #fff; }
-  @media all and (min-width: 600px) {
+  @media all and (min-width: 480px) {
     .main {
-      padding: 1.5em;
-      width: 100%; } }
-  @media all and (min-width: 1000px) {
+      padding: 1.5em; } }
+  @media all and (min-width: 720px) {
     .main {
       padding: 2em;
       width: 90%;
@@ -494,11 +490,11 @@ code {
   padding: 1em;
   background-color: #073642;
   color: #93a1a1; }
-  @media all and (min-width: 720px) {
+  @media all and (min-width: 480px) {
     .highlight {
       margin: 2em -1.5em;
       padding: 1em 1.5em; } }
-  @media all and (min-width: 1000px) {
+  @media all and (min-width: 720px) {
     .highlight {
       margin: 2em -2em;
       padding: 1em 2em; } }
@@ -678,11 +674,11 @@ code {
   width: 100%; }
 
 .title {
-  margin: 0;
+  margin: 0.5em 0;
   text-align: center;
   color: #899;
   font-size: 2em; }
-  @media all and (min-width: 700px) {
+  @media all and (min-width: 720px) {
     .title {
       font-size: 2.5em; } }
   @media all and (min-width: 1000px) {
@@ -696,7 +692,7 @@ code {
       color: #699; }
   .title\%home {
     font-size: 3em; }
-    @media all and (min-width: 700px) {
+    @media all and (min-width: 720px) {
       .title\%home {
         font-size: 5em; } }
     @media all and (min-width: 1000px) {

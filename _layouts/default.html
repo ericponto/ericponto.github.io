@@ -15,6 +15,9 @@
 		{% if page.css %}
 		<link rel="stylesheet" href="{{page.css}}">
 		{% endif %}
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.min.js"></script>
+		<![endif]-->
 	</head>
 	<body>
 		{{ content }}

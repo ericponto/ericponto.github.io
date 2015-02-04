@@ -15,3 +15,22 @@
 		@content;
 	}
 }
+
+// media queries
+@mixin small {
+	@media all and (min-width: #{$small-width}) {
+		@content;
+	}
+}
+
+@mixin medium {
+	@media all and (min-width: #{$medium-width}) {
+		@content;
+	}
+}
+
+@mixin large {
+	@media all and (min-width: #{$large-width}) {
+		@content;
+	}
+}

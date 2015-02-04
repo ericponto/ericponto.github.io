@@ -4,12 +4,12 @@
 	background-color: #073642;
 	color: #93a1a1;
 	
-	@media all and (min-width: 720px) {
+	@include small {
 		margin: 2em -1.5em;
 		padding: 1em 1.5em;
 	}
 	
-	@media all and (min-width: 1000px) {
+	@include medium {
 		margin: 2em -2em;
 		padding: 1em 2em;
 	}
