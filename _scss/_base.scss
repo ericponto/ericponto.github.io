@@ -7,9 +7,9 @@
 body {
 	font: normal 16px/1.5 Georgia, Cambria, serif;
 	color: #444;
-	background: #dee;
+	background: $bg;
 	margin: 0;
-	border-top: 0.5em solid #399;
+	border-top: 0.5em solid $red;
 	
 	@include small {
 		font-size: 18px;
@@ -47,5 +47,5 @@ a {
 }
 
 code {
-	color: #c30;
+	color: darken($red, 15%);
 }

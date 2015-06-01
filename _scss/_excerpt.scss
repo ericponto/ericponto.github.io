@@ -8,11 +8,11 @@
 		position: relative;
 		
 		a {
-			color: #899;
+			color: $title;
 			
 			&:hover,
 			&:focus {
-				color: #677;
+				color: #777;
 			}
 		}
 	}

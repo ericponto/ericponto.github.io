@@ -1,7 +1,7 @@
 .title {
 	margin: 0.5em 0;
 	text-align: center;
-	color: #899;
+	color: $title;
 	font-size: 2em;
 		
 	@include medium {
@@ -13,7 +13,8 @@
 	}
 	
 	a {
-		color: #899;
+		color: $title;
+		text-decoration: none;
 	}
 	
 	span {
@@ -21,7 +22,7 @@
 		display: inline-block;
 		
 		&:first-letter {
-			color: #699;
+			color: $red;
 		}
 	}
 	

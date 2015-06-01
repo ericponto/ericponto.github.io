@@ -367,9 +367,9 @@ th {
 body {
   font: normal 16px/1.5 Georgia, Cambria, serif;
   color: #444;
-  background: #dee;
+  background: #eee;
   margin: 0;
-  border-top: 0.5em solid #399; }
+  border-top: 0.5em solid #ef5950; }
   @media all and (min-width: 480px) {
     body {
       font-size: 18px; } }
@@ -399,7 +399,7 @@ a {
       box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.5); } }
 
 code {
-  color: #c30; }
+  color: #de2014; }
 
 .btn {
   background: #099;
@@ -431,9 +431,9 @@ code {
     line-height: 1.25;
     position: relative; }
     .excerpt\.title a {
-      color: #899; }
+      color: #999; }
       .excerpt\.title a:hover, .excerpt\.title a:focus {
-        color: #677; }
+        color: #777; }
   .excerpt\.info {
     padding: 0.5em 0;
     font-style: italic;
@@ -445,7 +445,7 @@ code {
     font-size: 2.5em;
     line-height: 1;
     margin: 0;
-    color: #699; }
+    color: #999; }
     @media all and (min-width: 600px) {
       .post\.title {
         font-size: 3em; } }
@@ -465,7 +465,7 @@ code {
       text-align: center;
       display: block;
       font-size: 1.5em;
-      color: #899;
+      color: #999;
       z-index: 2;
       position: absolute;
       bottom: 0px;
@@ -624,7 +624,7 @@ code {
   color: #b58900; }
 
 .highlight .bp {
-  color: #999999; }
+  color: #999; }
 
 .highlight .vc {
   color: #008080; }
@@ -676,7 +676,7 @@ code {
 .title {
   margin: 0.5em 0;
   text-align: center;
-  color: #899;
+  color: #999;
   font-size: 2em; }
   @media all and (min-width: 720px) {
     .title {
@@ -685,11 +685,12 @@ code {
     .title {
       font-size: 3em; } }
   .title a {
-    color: #899; }
+    color: #999;
+    text-decoration: none; }
   .title span {
     display: inline-block; }
     .title span:first-letter {
-      color: #699; }
+      color: #ef5950; }
   .title\%home {
     font-size: 3em; }
     @media all and (min-width: 720px) {
