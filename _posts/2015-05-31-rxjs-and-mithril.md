@@ -41,7 +41,7 @@ var Component = {
     
     Rx.Observable.just({ name: "Eric" })
       .subscribe(data => {
-        this.modal(data); // set the model
+        this.model(data); // set the model
         m.redraw(); // manually redraw
       });
   },
