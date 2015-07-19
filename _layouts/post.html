@@ -11,7 +11,7 @@
 		<header>
 			<h1 class="post.title" itemprop="name">{{ page.title }}</h1>
 			<div class="post.info">
-				<time class="post.date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time> | <span class="post-tags"> {{ page.tags | array_to_sentence_string }} </span>
+				<time class="post.date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%b %d, %Y' }}</time> | <span class="post-tags"> {{ page.tags | array_to_sentence_string }} </span>
 			</div>
 		</header>
 		<div class="post.body" itemprop="articleBody">

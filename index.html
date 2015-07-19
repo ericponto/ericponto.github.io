@@ -21,7 +21,7 @@
 		<div class="excerpt">
 			<h4 class="excerpt.title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
 			<div class="excerpt.info">
-				<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time> |  {{ post.tags | array_to_sentence_string }}
+				<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %d, %Y' }}</time> |  {{ post.tags | array_to_sentence_string }}
 			</div>
 			<div class="excerpt.content">
 				{{ post.excerpt | markdownify }}
