@@ -2,3 +2,4 @@ node_modules/
 _site/
 .c9/
 bower_components/
+.sass-cache/
