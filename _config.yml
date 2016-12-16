@@ -1,5 +1,4 @@
 name: Eric Ponto
-markdown: redcarpet
 highlighter: 'pygments'
 safe: false
 relative_permalinks: false
