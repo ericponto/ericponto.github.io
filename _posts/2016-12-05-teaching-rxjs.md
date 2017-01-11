@@ -67,7 +67,7 @@ td { border: 1px solid #444; }
     <tr>
       <th>Temporal</th>
       <td>Promise</td>
-      <td><em>Observable</strong></td>
+      <td><em>Observable</em></td>
     </tr>
   </tbody>
 </table>
