@@ -82,7 +82,7 @@ var searchGithub = (term) => m.request({
 });
 {% endhighlight %}
 
-And then we'll call that when a user types into the input. Since the input isn't rendered until the component is mounted, we need to attach the event handler to the containing element and then use [event delegation](http://www.ericponto.com/blog/2015/04/02/event-delegation-with-matches/) to target the input. (Note: I'm using `pluck` here from [`Rx.helpers.pluck`](https://github.com/Reactive-Extensions/RxJS/tree/master/doc/api/helpers#rxhelperspluckproperty).)
+And then we'll call that when a user types into the input. Since the input isn't rendered until the component is mounted, we need to attach the event handler to the containing element and then use [event delegation](https://www.ericponto.com/blog/2015/04/02/event-delegation-with-matches/) to target the input. (Note: I'm using `pluck` here from [`Rx.helpers.pluck`](https://github.com/Reactive-Extensions/RxJS/tree/master/doc/api/helpers#rxhelperspluckproperty).)
 
 {% highlight javascript %}
 Rx.Observable.fromEvent(el, "keyup")

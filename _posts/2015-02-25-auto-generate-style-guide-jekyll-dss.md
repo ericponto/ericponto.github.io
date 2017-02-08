@@ -44,4 +44,4 @@ To access the data outputted from DSS in a Jekyll template, the output can go in
 
 To get the DSS output in the `_data` folder I wrote a little grunt plugin that wraps DSS, [grunt-dss2json](https://github.com/ericponto/grunt-dss2json). It's available to use outside of Jekyll via `npm install --save-dev grunt-dss2json`, so you can use DSS with a different templating option. 
 
-I have a full example repo up for [Jekyll-DSS](https://github.com/ericponto/jekyll-dss) and a [page with the example output](http://www.ericponto.com/jekyll-dss/).  
+I have a full example repo up for [Jekyll-DSS](https://github.com/ericponto/jekyll-dss) and a [page with the example output](https://www.ericponto.com/jekyll-dss/).  

@@ -3,3 +3,4 @@ _site/
 .c9/
 bower_components/
 .sass-cache/
+.DS_Store

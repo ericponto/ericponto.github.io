@@ -5,7 +5,7 @@
   excerpt: Marble diagrams have been a useful tool in learning RxJS, but with RxJS 5 they are now a useful tool in writing unit tests for applications as well.
 ---
 
-One of my favorite features of RxJS 5 is that the `TestScheduler` has the ability to run tests via marble diagrams. On top of learning RxJS, learning to test it has been a challenge. Marble diagrams though have been an extremely useful tool in both learning the library and in [teaching it](http://www.ericponto.com/blog/2016/12/05/teaching-rxjs/).
+One of my favorite features of RxJS 5 is that the `TestScheduler` has the ability to run tests via marble diagrams. On top of learning RxJS, learning to test it has been a challenge. Marble diagrams though have been an extremely useful tool in both learning the library and in [teaching it](https://www.ericponto.com/blog/2016/12/05/teaching-rxjs/).
 
 I read about marble testing nearly a year ago when it was being worked on in RxJS 5 and saw that it was being used to test the library internally. But I didn't really investigate it until recently. And now that v5 has been officially released, I decided to see if marble tests could be used to test application code.
 

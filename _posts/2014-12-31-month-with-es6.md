@@ -5,7 +5,7 @@
   excerpt: Over the past month, I've started using ES6 features wherever I could. Here's a collection of some of my thoughts on the new features.
 ---
 
-I've written about some [ES6 features before](http://www.ericponto.com/blog/2014/10/05/es6-dom-library/) and put together [an intro talk](http://dsmjs.com/11-12-14-intro-to-es6/slides.html#/) on it as well. But around Thanksgiving, I started a new little project and decided to go all in with ES6. So after a month of using ES6 quite a bit, here's a collection of some of my thoughts...
+I've written about some [ES6 features before](https://www.ericponto.com/blog/2014/10/05/es6-dom-library/) and put together [an intro talk](http://dsmjs.com/11-12-14-intro-to-es6/slides.html#/) on it as well. But around Thanksgiving, I started a new little project and decided to go all in with ES6. So after a month of using ES6 quite a bit, here's a collection of some of my thoughts...
 
 ##Some Sugar
 A lot of ES6 is just "syntax sugar." It's not new features to the language, just easier ways to write them. New methods on the native objects are perfect examples. `String.prototype.contains` replaces the usual `indexOf` greater than -1 check. `Array.from(myArrayLikeObject)` is much easier than `Array.prototype.slice.call(myArrayLikeObject)`. And so on.

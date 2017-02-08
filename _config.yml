@@ -1,10 +1,10 @@
 name: Eric Ponto
-highlighter: 'pygments'
+highlighter: 'rouge'
 safe: false
 relative_permalinks: false
 exclude: ['README.md', 's3_website.yml', 'node_modules', 'bower.json', '.bowerrc', 'package.json', 'Gruntfile.js']
 permalink: /blog/:year/:month/:day/:title/
-url: http://ericponto.com
+url: https://www.ericponto.com
 future: false
 encoding: utf-8
 paginate: 5

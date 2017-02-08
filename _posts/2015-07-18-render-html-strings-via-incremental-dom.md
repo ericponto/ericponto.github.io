@@ -62,7 +62,7 @@ render: function(data) {
 }
 {% endhighlight %}
 
-I made an example of [html2idom with a dbmonster demo](http://www.ericponto.com/html2idom-dbmonster/) to test its performance. And it is actually pretty good. Parsing that big chunk of HTML does take a little time. However, the perf hit that you take by parsing the HTML is made up for in the really fast patch operation and the quick repaint.
+I made an example of [html2idom with a dbmonster demo](https://www.ericponto.com/html2idom-dbmonster/) to test its performance. And it is actually pretty good. Parsing that big chunk of HTML does take a little time. However, the perf hit that you take by parsing the HTML is made up for in the really fast patch operation and the quick repaint.
 
 On my low powered Chromebook, using the Dev Tool's profiler, I am getting a redraw on dbmonster every 110ms or so. About 55ms of that is parsing the HTML, 15ms for Incremental DOM, then 40ms to re-layout/paint. Compare that to the [underscore implementation](http://jashkenas.github.io/dbmonster/) that also redraws about every 110ms. The breakdown there is lighter on the JS processing time,only 40ms or so, but the repaint takes much longer as is it a full replace via `innerHTML`. 
 

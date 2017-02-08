@@ -87,7 +87,7 @@ dropzone.addEventListener("drop", function(e) {
 }, false);
 {% endhighlight %}
 
-Check out a working example: [Drag and Drop JavaScript Minifier Demo](http://www.ericponto.com/demos/jsminify/index.html).
+Check out a working example: [Drag and Drop JavaScript Minifier Demo](https://www.ericponto.com/demos/jsminify/index.html).
 
 ## Browser Support
 I should probably mention browser support at some point. It is actually pretty good. [Drag and drop has great support](http://caniuse.com/dragndrop) on non-mobile browsers. IE actually implemented a version of it was back in IE5. The [file reader's support](http://caniuse.com/filereader) is more widespread wth the addition of the mobile browsers, but doesn't extend very far back in version of IE.
@@ -95,5 +95,5 @@ I should probably mention browser support at some point. It is actually pretty g
 So, if you have an app that relies on working with use files and want broader reach, it is probably best to have a file input on the page as well as a drop zone. And, have the ability to post those files back to a server somewhere that handles them in the same way.
 
 ## Keep exploring
-Once you have down the drag and drop events and the `FileReader`, the doors are pretty open to what you can do in the browser with files. If you want to read more about them, the [HTML5Rocks article](http://www.html5rocks.com/en/tutorials/file/dndfiles/) on the topic is good. (Which, side note is from 4 years ago! And, I'm just now writing about it...) So with these tools, you can expand to do things like minify CSS and HTML, compile CoffeeScript and LESS, convert a CSV file into an HTML table, [convert SVGs into PNG fallbacks](http://grumpicon.com), and on and on. Right now I'm working on a drag and drop tool, [ToasterOven](http://ericponto.com/ToasterOven/), that tries to do a lot of these types of tasks in a simple way and lets you download a zip file of everything at the end.
+Once you have down the drag and drop events and the `FileReader`, the doors are pretty open to what you can do in the browser with files. If you want to read more about them, the [HTML5Rocks article](http://www.html5rocks.com/en/tutorials/file/dndfiles/) on the topic is good. (Which, side note is from 4 years ago! And, I'm just now writing about it...) So with these tools, you can expand to do things like minify CSS and HTML, compile CoffeeScript and LESS, convert a CSV file into an HTML table, [convert SVGs into PNG fallbacks](http://grumpicon.com), and on and on. Right now I'm working on a drag and drop tool, [ToasterOven](https://www.ericponto.com/ToasterOven/), that tries to do a lot of these types of tasks in a simple way and lets you download a zip file of everything at the end.
 
