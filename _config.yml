@@ -7,6 +7,7 @@ permalink: /blog/:year/:month/:day/:title/
 url: https://www.ericponto.com
 future: false
 encoding: utf-8
-paginate: 5
-paginate_path: "blog/page-:num"
 port: 3417
+sass:
+  sass_dir: _scss
+  style: compressed

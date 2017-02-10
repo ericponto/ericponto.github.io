@@ -1,7 +1,9 @@
-@import "../_lib/cw-normalize/normalize";
-
+---
+# Jekyll to compile scss
+---
 @import "vars";
 @import "mixins";
+@import "reset";
 @import "base";
 @import "button";
 @import "excerpt";

@@ -1,0 +1,124 @@
+// starting with _reboot from Bootstrap 4
+
+html {
+	box-sizing: border-box;
+	font-family: sans-serif;
+	line-height: 1.15;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-overflow-style: scrollbar;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+@at-root {
+	@-ms-viewport { width: device-width; }
+}
+
+body {
+	margin: 0;
+	font-family: Georiga, Cambria, serif;
+	font-size: 16px;
+	font-weight: normall;
+	line-height: 1.5;
+	color: #444;
+	background-color: $bg;
+	border-top: 0.5em solid $red;
+	
+	@include small {
+		font-size: 18px;
+	}
+}
+
+[tabindex="-1"]:focus {
+	outline: none !important;
+}
+
+a {
+	color: #399;
+	text-decoration: none;
+	font-weight: bold;
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+		color: #288;
+	}
+}
+
+pre,
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+pre {
+	margin-top: 0;
+	margin-bottom: 1rem;
+	overflow: auto;
+}
+
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+	touch-action: manipulation;
+}
+
+
+table {
+	border-collapse: collapse;
+}
+
+th {
+	text-align: left;
+}
+
+button:focus {
+	outline: 1px dotted;
+	outline: 5px auto -webkit-focus-ring-color;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+button,
+input {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button {
+	-webkit-appearance: button; 
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border-style: none;
+}
