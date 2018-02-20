@@ -16,7 +16,7 @@ I think this is the most common way to teach Observables and also the most appro
 
 {% highlight javascript %}
 const sum    = (a, b) => a + b;
-const isOdd  = (x)    => x % 2 ===0;
+const isOdd  = (x)    => x % 2;
 const square = (x)    => x * x;
 
 const total = [1, 2, 3, 4, 5]
@@ -195,8 +195,8 @@ const reducer (state = 0, action) => {
 
 const store = createStore(reducer);
 
-upButton.addEventListener("click", () => store.dispatch("UP"));
-downButton.addEventListener("click", () => store.dispatch("DOWN"));
+upButton.addEventListener("click", () => store.dispatch({ type: "UP" }));
+downButton.addEventListener("click", () => store.dispatch({ type: "DOWN" }));
 
 store.subscribe(() => renderMyComponent(store.getState()));
 {% endhighlight %}
@@ -218,8 +218,8 @@ const dispatch = (action) => actions$.next(action);
 
 const store$ = actions$.scan(reducer);
 
-upButton.addEventListener("click", () => dispatch("UP"));
-downButton.addEventListener("click", () => dispatch("DOWN"));
+upButton.addEventListener("click", () => dispatch({ type: "UP" }));
+downButton.addEventListener("click", () => dispatch({ type: "DOWN" }));
 
 store$.subscribe(renderMyComponent);
 {% endhighlight %}
@@ -290,7 +290,7 @@ Functor.of(2)    // Functor(2)
   .map(square);  // Functor(100)
 {% endhighlight %}
 
-RxJS creates its own Functor too...the Observable. An Observable is a container for values that may or may not be asynchronous. And if has the same methods as an Array or our Functor.
+RxJS creates its own Functor too...the Observable. An Observable is a container for values that may or may not be asynchronous. And it has the same methods as an Array or our Functor.
 
 {% highlight javascript %}
 Observable.of(2) // |--2---->
@@ -299,7 +299,7 @@ Observable.of(2) // |--2---->
   .map(square);  // |--100-->
 {% endhighlight %}
 
-Ultimately though, an Observable is a container for a function. It contains function that takes an `observer` object and calls the `next`, `error`, and/or `complete` methods on that object (as we've seen above with `Observer.create`). Without the container, we could still get the base functionality of Observable with just a good ol' function.
+Ultimately though, an Observable is a container for a function. It contains a function that takes an `observer` object and calls the `next`, `error`, and/or `complete` methods on that object (as we've seen above with `Observable.create`). Without the container, we could still get the base functionality of Observable with just a good ol' function.
 
 {% highlight javascript %}
 const observableFunction = (observer) => {
