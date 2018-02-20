@@ -9,7 +9,7 @@ One of my favorite features of RxJS 5 is that the `TestScheduler` has the abilit
 
 I read about marble testing nearly a year ago when it was being worked on in RxJS 5 and saw that it was being used to test the library internally. But I didn't really investigate it until recently. And now that v5 has been officially released, I decided to see if marble tests could be used to test application code.
 
-The library's repo itself uses mocha to run its tests (this post will use QUnit) and you can look through the [spec](https://github.com/ReactiveX/rxjs/tree/master/spec) folder to see how it is set up. There is also a good doc on how to write [marble tests](https://github.com/ReactiveX/rxjs/blob/master/doc/writing-marble-tests.md) for the internal unit tests. 
+The library's repo itself uses mocha to run its tests (this post will use QUnit) and you can look through the [spec](https://github.com/ReactiveX/rxjs/tree/master/spec) folder to see how it is set up. There is also a good doc on how to write [marble tests](https://github.com/ReactiveX/rxjs/blob/master/doc/writing-marble-tests.md) for the internal unit tests.
 
 ## Marble Diagram Syntax
 
@@ -47,11 +47,11 @@ It feels like the canonical app for demoing anything with state management is a 
 * When you click the up button it adds 1 to the count.
 * When you click the down button it subtracts 1 from the count.
 
-The [completed code for the app](https://github.com/ericponto/rxjs-marble-test-example) (and the marble test) are on github if you want to follow along there. 
+The [completed code for the app](https://github.com/ericponto/rxjs-marble-test-example) (and the marble test) are on github if you want to follow along there.
 
 ## Laying Out Out Marbles
 
-Before we build anything, we can construct marble diagrams to map out our logic. You could call it "Marble Driven Devlopment." Let's start with the click events. A stream of click events on the up button might look something like: 
+Before we build anything, we can construct marble diagrams to map out our logic. You could call it "Marble Driven Development." Let's start with the click events. A stream of click events on the up button might look something like:
 
 ```
 --x----x--x---
@@ -65,7 +65,7 @@ Then we would also have a stream of click events on the down button.
 
 With those two marble diagrams we've mocked out a user clicking the up button on frame 20, down on frame 40, up again on frame 70, up on frame 100, and finally down on frame 120. Based on our requirements, the state would be:
 
-* `{count: 0}` 
+* `{count: 0}`
 * `{count: 1}`
 * `{count: 0}`
 * `{count: 1}`
@@ -89,7 +89,7 @@ state: a-b-a--b--c-b-
 
 ## Using the TestScheduler
 
-With our marble diagrams we can now write a test for our app. The `TestScheduler` in RxJS enables a number of features that will help with writing tests. When instantiating a `new TestScheduler` you pass it an assertion that will test the equality of your actual Observable vs. the expected Observable. Here we are going to use QUnit, so we need to instantiate the `TestSchedule` inside of a `test` function in order to have access to the `assert` object. Then we can use `assert.deepEqual` to test for equality in our actual and expected Observables.
+With our marble diagrams we can now write a test for our app. The `TestScheduler` in RxJS enables a number of features that will help with writing tests. When instantiating a `new TestScheduler` you pass it an assertion that will test the equality of your actual Observable vs. the expected Observable. Here we are going to use QUnit, so we need to instantiate the `TestScheduler` inside of a `test` function in order to have access to the `assert` object. Then we can use `assert.deepEqual` to test for equality in our actual and expected Observables.
 
 {% highlight javascript %}
 test("testing the model", (assert) => {
@@ -98,7 +98,7 @@ test("testing the model", (assert) => {
 });
 {% endhighlight %}
 
-In the RxJS repo they have utility functions to create observables called `hot` and `cold`, but these are just aliases to the `createHotObservable` and `createColdObservable` methods on the `TestScheduler` respectively. We can use `createHotObservable` directly to mock out of up and down click events by passing in our marble diagrams.
+In the RxJS repo they have utility functions to create observables called `hot` and `cold`, but these are just aliases to the `createHotObservable` and `createColdObservable` methods on the `TestScheduler` respectively. We can use `createHotObservable` directly to mock out the up and down click events by passing in our marble diagrams.
 
 {% highlight javascript %}
 const upMarbles   = "--x----x--x---";
@@ -146,7 +146,7 @@ test("Test Model", (assert) => {
   const upMarbles   = "--x----x--x---";
   const downMarbles = "----x-------x-";
   const expected    = "a-b-a--b--c-b-";
-  
+
   const expectedStateMap = {
     a: {count: 0},
     b: {count: 1},
@@ -169,7 +169,7 @@ test("Test Model", (assert) => {
 
 ## Now Coding the App
 
-The purpose of this post was the above part on the marble diagram testing, but I'll still hit on the key bits of the app's code to give extra context for the test. We will start off with the view. The important chuck of the view is the little bit of markup. It is just the two buttons and the count, which will come from our state.
+The purpose of this post was the above part on the marble diagram testing, but I'll still hit on the key bits of the app's code to give extra context for the test. We will start off with the view. The important chuck of the view is this little bit of markup. It is just the two buttons and the count, which will come from our state.
 
 {% highlight javascript %}
 const template = (state) => (
@@ -209,4 +209,4 @@ const model = ({up$, down$}) =>
   .scan((state, fn) => fn(state));
 {% endhighlight %}
 
-And that is pretty much it. Even though this was a relatively simple example, I think it layouts out a pattern that can be grown to fit a lot of applications. Creating a model as a state store that takes events allows you to test its logic by creating marble diagrams for the events and another one for the expected state. And again, this [marble test example is up on github](https://github.com/ericponto/rxjs-marble-test-example), so check it out.
+And that is pretty much it. Even though this was a relatively simple example, I think it lays outs a pattern that can be grown to fit a lot of applications. Creating a model as a state store that takes events allows you to test its logic by creating marble diagrams for the events and another one for the expected state. And again, this [marble test example is up on github](https://github.com/ericponto/rxjs-marble-test-example), so check it out.
