@@ -4,3 +4,4 @@ _site/
 bower_components/
 .sass-cache/
 .DS_Store
+.jekyll-cache

@@ -40,8 +40,7 @@ body {
 }
 
 a {
-	color: #399;
-	text-decoration: none;
+	color: $link;
 	font-weight: bold;
 	background-color: transparent;
 	-webkit-text-decoration-skip: objects;
@@ -49,7 +48,7 @@ a {
 	&:hover,
 	&:focus {
 		text-decoration: underline;
-		color: #288;
+		color: darken($link, 10%);
 	}
 }
 

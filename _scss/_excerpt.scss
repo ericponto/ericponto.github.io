@@ -8,11 +8,13 @@
 		position: relative;
 		
 		a {
-			color: $title;
+            color: $title;
+            text-decoration: none;
 			
 			&:hover,
 			&:focus {
-				color: #777;
+                color:darken($title, 10%);
+                text-decoration: underline;
 			}
 		}
 	}
