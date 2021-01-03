@@ -1,6 +1,7 @@
 name: Eric Ponto
-highlighter: 'rouge'
-safe: false
+highlighter: rouge
+markdown: kramdown
+safe: true
 relative_permalinks: false
 exclude: ['README.md', 's3_website.yml', 'node_modules', 'bower.json', '.bowerrc', 'package.json', 'Gruntfile.js']
 permalink: /blog/:year/:month/:day/:title/
@@ -11,3 +12,5 @@ port: 3417
 sass:
   sass_dir: _scss
   style: compressed
+kramdown:
+  syntax_highlighter: rouge
